@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Art Portfolio">
+    <!--change later-->
+    <meta name="keywords" content="Art, Portfolio">
+    <meta name="author" content="Ashley Chen">
+    <title>Ashley's Art :)</title>
+    <link rel="stylesheet" href="decor.css">
+</head>
+
+<div id="imageModal" class="modal">
+  <span class="close-btn">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Expanded Art">
+    <div class="modal-text">
+      <h2>Artwork Title</h2>
+      <p id="imageDescription"></p>
+    </div>
+  </div>
+</div>
+
+<header>
+</header>
+
+<body>
+    <div class="nav">
+        <div>
+            <h1><span class="highlight">A</span>shley Chen</h1>
+        </div>
+
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#work">Work</a>
+                    <ul class="dropdown-menu">
+                        <li class="blue-bg"><a href="">Digital Art</a></li>
+                        <li class="red-bg"><a href="">Crafts</a></li>
+                        <li class="green-bg"><a href="">Animations</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Crafts">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="yearn.mp4" type="video/mp4">
+        </video>
+        <video autoplay loop muted playsinline>
+            <source src="yearn.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="opaque-bg">
+        <div class="start fade-up"> 
+            <h1><span class="highlight">A</span>rtist</h1>
+            <h3>featuring digital & traditional art</h3>
+            <p>interested in graphic, game and product design</p>
+            <a href="#work">view my work!</a>
+        </div>
+    </div>
+
+<div class="bg">
+    <div class="fade-up About">
+        <div class="pfp">
+            <img src="pfp2.jpg">
+        </div>
+        <div class="about_description">
+            <h1 class="title">Hi, I'm Ashley Chen</h1>
+            <p>I'm a third-year studying <span class="highlight">Art & Design: Games and Playable Media</span> at UC Santa Cruz.<br>
+                I built this website using HTML, CSS, and Javascript to showcase my work!<br><br>
+                I enjoy incorporating emotion with my artwork to create meaningful pieces that speak for me and for others.<br><br>
+                Whether it is expressing my love for my friends or feelings of personal distress, art is how I communicate with the world.</p>
+
+            <h1 class="title">Contact</h1>
+            <div class="icons">
+                <a href="mailto:ashleyxinranchen@gmail.com" target="_blank" title="ashleyxinranchen@gmail.com"><img src="mail.png"></a>
+                <a href="https://www.linkedin.com/in/ashley-chen-850890377/" target="_blank" title="Ashley Chen"><img src="linkedin.png"></a>
+                <a href="https://www.instagram.com/actuallybippo" target="_blank" title="@actuallybippo"><img src="instagram.png"></a>
+                <a href="https://www.tiktok.com/@actuallybippo.2" target="_blank" title="@actuallybippo.2"><img src="tiktok.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <br id="work">
+    <div class="fade-up">
+        <br id="DigitalArts"></br>
+        <h1 class="title">Digital Art</h1>
+        <div class="scroll-wrapper">
+            <button class="left-arrow" onclick="scrollContent(-1)">&lt;</button>
+            <div class="scrollbar" id="scroll">
+                <div class="item"><img src="yearn.png" data-title="Don't Be a Stranger" alt="An artwork depicting my feelings of yearning and grief after experiencing emotional turmoil." data-video="yearn.mp4" data-orientation="landscape" title="hi!"></div>
+                <div class="item"><img src="angel.png" data-title="Wasted Potential" data-gallery="angel.png,flower_field.png,hachiware.jpg" alt="An artwork depicting my feelings of discontent within my abilities and skills." title="tulips are my favorite"></div>
+                <div class="item"><img src="baking_bunnies.png" data-title="Morisaka Global Art Contest" data-gallery="baking_bunnies.png,baking_bunnies2.png,baking_bunnies3.png" alt="Placing third place, I entered this artwork into the Morisaka Global Art Contest." title="₍ᐢ. .ᐢ₎"></div>
+                <div class="item img-card"><img src="pokemon_card.png" data-title="Custom Pokémon Card" alt="A fan-made Pokemon card poster design featuring custom artwork dedicated to my friend. They liked the beach, Piplup, & the number 21." title="Chansey is my favorite"></div>
+                <div class="item"><img src="redpanda1.png" data-title="Morisaka Global Plush Design" data-gallery="redpanda1.png,redpanda2.png,redpanda3.png" alt="Requested by the Morisaka Global owners, I created this red panda plush design. It includes fabric choices and stitch lines." title="hehe"></div>
+                <div class="item"><img src="birthday_banner.png" data-title="Custom Birthday Banner" alt="Comissioned by my physics teacher, I drew this Birthday banner design where each character respresents each of his kids." data-orientation="landscape" title="shoutout Mr. Chan"></div>
+            </div>
+        
+            <button class="right-arrow" onclick="scrollContent(1)">&gt;</button>
+        </div>
+    </div>
+
+    <div class="fade-up">
+        <br id="Crafts"></br>
+        <h1 class="title">Crafts</h1>
+        <div class="scroll-wrapper">
+            <button class="left-arrow" onclick="scrollContent2(-1)">&lt;</button>
+            <div class="scrollbar" id="scroll2">
+                <div class="item"><img src="pochita1.png" data-gallery="pochita1.png,pochita2.jpg,pochita3.png,pochita4.png,pochita5.jpg" data-title="Custom Pochita Squishmallow" alt="A custom made Squishmallow based off the character Pochita from Chainsawman."></div>
+                <div class="item"><img src="s_bowling_1.png" data-title="Sakura Themed Bowling Pin" data-gallery="s_bowling_1.png,s_bowling_2.png,s_bowling_3.png,s_bowling_4.png" alt="A custom made gift for my friend as a token of appreciation and gratitude. It features sakura flowers and petals made from polymer clay."></div>
+                <div class="item"><img src="d_bowling_1.png" data-title="Doreamon Themed Bowling Pin" data-gallery="d_bowling_1.png,d_bowling_2.png,d_bowling_3.png,d_bowling_4.png" alt="A custom made gift for my friend as a token of appreciation and gratitude."></div>
+                <div class="item"><img src="car.jpg" data-title="Custom M3 G80 Painting" alt="A hand painted gift of my friend's favorite car for their birthday. It features the M3 G80 driving on Highway 17, a road they often drove."></div>
+                <div class="item"><img src="haku1.jpg" data-gallery="haku1.jpg,haku2.jpg,haku3.jpg" data-title="Custom Haku Squishmallow" alt="A custom made Squishmallow based off the character Haku from Spirited Away."></div>
+                <div class="item"><img src="totoro1.jpg" data-gallery="totoro1.jpg,totoro2.jpg,totoro3.jpg" data-title="Custom Totoro Squishmallow" alt="A custom made Squishmallow based off the character Totoro from My Neighbor Totoro."></div>
+            </div>
+            <button class="right-arrow" onclick="scrollContent2(1)">&gt;</button>
+        </div>
+    </div>
+
+    <div class="fade-up">
+        <br id="Animations"></br>
+        <h1 class="title">Animations</h1>
+        <div class="scroll-wrapper">
+            <button class="left-arrow" onclick="scrollContent3(-1)">&lt;</button>
+            <div class="scrollbar" id="scroll3">
+                <div class="item animation"><img src="what_cover.png" data-title="?@#$%!" alt="Created this animation to practice my skills in animation, perspective, and sound." data-video="what.mp4" data-orientation="landscape"></div>
+                <div class="item animation"><img src="world_cover.png" data-title="World of 7 Billion Contest" alt="Placing top 10 in the International World of 7 Billion Contest, I created this animation for my partner Abigail Park." data-video="World_of_7Billion.mp4" data-orientation="landscape"></div>
+                <div class="item animation"><img src="emotes_cover.png" data-title="Bumbumz Emotes" alt="Cute emotes I designed for my friend's discord server. It is based off the plush brand BumBumz." data-video="emotes.mp4" data-orientation="landscape"></div>
+            </div>
+            <button class="right-arrow" onclick="scrollContent3(1)">&gt;</button>
+        </div>
+    </div>
+</div>
+
+    <button id="scrollToTopBtn" title="Go to top !">▲</button>
+<script src="myscript.js"></script>
+</body>
+
+<footer>
+</footer>
+</html>

@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital@0;1&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #edf0f1;
+    font-family: "Overpass", sans-serif;
+}
+body {
+    background-color: black;
+    /*background-image: linear-gradient(to top, #2e3a49,#0a0d11);*/
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+/*nav*/
+li, a {
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0,0,0,.75);
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+}
+.nav li {
+    padding-left: 10px;
+}
+.nav a {
+    width: 100px;
+    display: block;
+    padding: 5px 0;
+    transition: 0.5s;
+}
+.nav h1 {
+    margin-left: 100px;
+    padding: 15px 0;
+}
+
+/*drop down menu*/
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    top: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    list-style: none;
+    z-index: 100;
+    width: 145px;
+    height: 188px;
+    padding: 10px 0;
+    left: -10px;
+    
+    /*hidden*/
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+.dropdown-menu a {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 125px;
+    align-items: center;
+}
+ul.dropdown-menu {
+    margin: 0;
+    padding: 0;
+}
+/*hover*/
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    display: block;
+    padding-top: 18px;
+}
+.dropdown-menu li a {
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
+    width: 125px;
+    margin-top: 10px;
+    align-items: center;
+}
+.dropdown-menu li a:hover {
+    width: 125px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+.dropdown-menu li.blue-bg a:hover {
+    background-color: rgba(0, 60, 255, 0.8);
+}
+
+.dropdown-menu li.red-bg a:hover {
+    background-color: rgba(255, 0, 43, 0.8);
+}
+
+.dropdown-menu li.green-bg a:hover {
+    background-color: rgba(149, 255, 0, 0.8);
+}
+
+/*background*/
+#video-background {
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+    display: flex;
+    overflow: hidden;
+    margin-top: 30px;
+}
+#video-background video {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Body*/
+.opaque-bg {
+    background-color: rgba(255,255,255,.1);
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 310px;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 20px;
+    text-align: center;
+}
+.start h1 {
+    padding-bottom: 15px;
+    font-size: 60px;
+}
+.start h3 {
+    padding-bottom: 20px;
+}
+.start p {
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+.start a {
+    background-color: #edf0f1;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.bg {
+    background-image: linear-gradient(to top, #2e3a49,#0a0d11);
+}
+
+/*About Me*/
+.pfp img {
+    max-width: 540px;
+    max-height: 540px;
+    border-radius: 4%;
+    box-shadow: 0 0 10px #000000;
+}
+.About {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.About p {
+    font-size: 20px;
+    padding-left: 50px;
+}
+.about_description {
+    max-width: 500px;
+}
+.highlight {
+    color: rgb(25, 128, 245);
+}
+.icons {
+    margin-left: 50px;
+}
+.icons img {
+    height: 35px;
+    padding-right: 20px;
+}
+
+/*contact*/
+.Contact-List a {
+    font-size: 20px;
+    padding-left: 50px;
+}
+
+
+
+
+
+.title {
+    margin: 20px 50px;
+}
+.scroll-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+}
+.scrollbar {
+    width: 1560px; /* 370px × 4 */
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin: 0; /* center horizontally */
+}
+/*for Chrome & Safari*/
+.scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.item img {
+    width: 370px;
+    height: auto;
+    max-height: 430px;
+    margin: 20px;
+    box-shadow: 0 0 10px #000000;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    scroll-snap-align: start;
+}
+.item {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+.item img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.img-card {
+    width: 340px;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animation img {
+    width: auto;
+    height: 400px;
+}
+
+.left-arrow {
+    color:  #edf0f1;
+    background: none;
+    border: none;
+    padding: 30px;
+    margin-left: 30px;
+    font-size: 50px;
+    font-family: "Rubik", sans-serif;
+    transition: transform 0.3s ease;
+    opacity: 0.5;
+}
+.left-arrow:hover {
+    transform: scale(1.3);
+    opacity: 1;
+}
+.right-arrow {
+    color:  #edf0f1;
+    background: none;
+    border: none;
+    padding: 30px;
+    margin-right: 30px;
+    font-size: 50px;
+    font-family: "Rubik", sans-serif;
+    transition: transform 0.3s ease;
+    opacity: 0.5;
+}
+.right-arrow:hover {
+    transform: scale(1.3);
+    opacity: 1;
+}
+
+/*animations/transitions*/
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    margin-bottom: 25px;
+}
+.fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-content img {
+    max-width: 500px;
+    max-height: 80vh;
+    box-shadow: 0 0 20px black;
+}
+.modal-content .landscape {
+    max-width: 1000px;
+}
+.modal-content video {
+    max-height: 500px;
+}
+.modal-text {
+    max-width: 350px;
+    color: #edf0f1;
+    font-family: "Merriweather", sans-serif;
+}
+.modal-text h2 {
+    margin-bottom: 10px;
+}
+.modal-text p {
+    line-height: 1.5;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    z-index: 10000;
+}
+.close-btn:hover {
+    color: #f00;
+    transform: scale(1.2);
+}
+/*go to top button*/
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 99;
+  background-color: #edf0f1;
+  color: black;
+  border: none;
+  padding: 20px 23px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s ease;
+  pointer-events: none;
+}
+
+/*when button is visible*/
+#scrollToTopBtn.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+#scrollToTopBtn:hover {
+  background-color: #000000;
+  color: white;
+}

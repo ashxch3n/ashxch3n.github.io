@@ -1,33 +1,3 @@
-// scroll bar function
-function scrollContent(direction) {
-  const container = document.getElementById('scroll');
-
-  container.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth'
-  });
-}
-
-/*function scrollContent2(direction) {
-  const container = document.getElementById('scroll2');
-  const scrollAmount = 370;
-
-  container.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth'
-  });
-}
-
-function scrollContent3(direction) {
-  const container = document.getElementById('scroll3');
-  const scrollAmount = 370;
-
-  container.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth'
-  });
-}*/
-
 // Fade-up animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -47,9 +17,9 @@ let FadeUp = document.getElementById("fade-up");
 
 window.addEventListener("scroll", function() {
   if (window.scrollY > 100) {
-    FadeUp.classList.add("active"); // fade in + slide
+    FadeUp.classList.add("active");
   } else {
-    FadeUp.classList.remove("active"); // fade out + slide back down
+    FadeUp.classList.remove("active");
   }
 });
 
@@ -102,21 +72,6 @@ document.querySelectorAll('.item img').forEach(img => {
         } else {
             modalImg.classList.remove('landscape');
         }
-    }
-    if (img.dataset.video) {
-        modalImg.style.display = 'block';
-        let modalVideo = document.getElementById('modalVideo');
-
-        if (!modalVideo) {
-            modalVideo = document.createElement('video');
-            modalVideo.id = 'modalVideo';
-            modalVideo.controls = true;
-            modalVideo.style.maxWidth = '90%';
-            modalImg.parentElement.insertBefore(modalVideo, modalImg);
-        }
-
-        modalVideo.src = img.dataset.video;
-        modalVideo.style.display = 'block';
     }
   });
 });

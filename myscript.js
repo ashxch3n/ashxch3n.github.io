@@ -1,36 +1,3 @@
-
-
-// scroll bar function
-function scrollContent(direction) {
-  const container = document.getElementById('scroll');
-  const scrollAmount = 370; // match item width + margin
-
-  container.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth'
-  });
-}
-
-function scrollContent2(direction) {
-  const container = document.getElementById('scroll2');
-  const scrollAmount = 370;
-
-  container.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth'
-  });
-}
-
-function scrollContent3(direction) {
-  const container = document.getElementById('scroll3');
-  const scrollAmount = 370;
-
-  container.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth'
-  });
-}
-
 // Fade-up animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -79,10 +46,9 @@ document.querySelectorAll('.item img').forEach(img => {
       modalVideo.style.display = 'block';
       modalVideo.play();
     } else {
-      // If image
-      modalImg.src = img.src;
-      modalImg.style.display = 'block';
-      const modalVideo = document.getElementById('modalVideo');
+    
+    // If image
+    const modalVideo = document.getElementById('modalVideo');
       if (modalVideo) modalVideo.style.display = 'none';
 
       // Apply landscape class if applicable
@@ -92,7 +58,7 @@ document.querySelectorAll('.item img').forEach(img => {
     }
 
     // Slideshow
-    currentGallery = img.dataset.gallery
+    /* currentGallery = img.dataset.gallery
       ? img.dataset.gallery.split(',').map(url => url.trim())
       : [img.src];
     currentIndex = 0;
@@ -103,7 +69,7 @@ document.querySelectorAll('.item img').forEach(img => {
         currentIndex = (currentIndex + 1) % currentGallery.length;
         modalImg.src = currentGallery[currentIndex];
       }, 2000); // Change image every 2 seconds
-    }
+    } */
   });
 });
 
@@ -134,6 +100,7 @@ document.getElementById('imageModal').addEventListener('click', (e) => {
   }
 });
 
+// Go to top button
 let scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 window.addEventListener("scroll", function() {
@@ -150,3 +117,52 @@ scrollToTopBtn.addEventListener("click", function() {
     behavior: "smooth"
   });
 });
+
+// fade-up by scroll
+let FadeUp = document.getElementById("fade-up");
+
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 100) {
+    FadeUp.classList.add("active"); // fade in + slide
+  } else {
+    FadeUp.classList.remove("active"); // fade out + slide back down
+  }
+});
+
+// fade-up different times animation
+window.addEventListener('DOMContentLoaded', () => {
+  const fadeUps = document.querySelectorAll('.fade-up2');
+
+  fadeUps.forEach(item => {
+    setTimeout(() => {
+      item.classList.add('active'); 
+    }, 50);
+  });
+});
+
+/* animation section */
+const sections = document.querySelectorAll(".section");
+
+function updateOpacity() {
+  const centerY = window.innerHeight / 2;
+
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const sectionCenter = rect.top + rect.height / 2;
+
+    const distance = Math.abs(centerY - sectionCenter);
+
+    // normalize: closer to center → opacity closer to 1
+    const maxDistance = window.innerHeight / 2; // fade range
+    let opacity = 1 - distance / maxDistance;
+
+    // clamp 0–1
+    opacity = Math.max(0.2, Math.min(1, opacity));
+
+    section.style.opacity = opacity;
+  });
+}
+
+window.addEventListener("scroll", updateOpacity);
+window.addEventListener("resize", updateOpacity);
+updateOpacity();

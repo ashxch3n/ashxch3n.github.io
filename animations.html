@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Art Portfolio">
+    <!--change later-->
+    <meta name="keywords" content="Art, Portfolio">
+    <meta name="author" content="Ashley Chen">
+    <title>Animations</title>
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<div id="imageModal" class="modal">
+  <span class="close-btn">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Expanded Art">
+    <div class="modal-text">
+      <h2>Artwork Title</h2>
+      <p id="imageDescription"></p>
+    </div>
+  </div>
+</div>
+
+<header>
+</header>
+
+<body>
+    <div class="nav">
+        <div>
+            <h1>Ashley Chen</h1>
+        </div>
+
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html #work">Work</a>
+                    <ul class="dropdown-menu">
+                        <li class="blue-bg"><a href="digitalart.html">Digital Art</a></li>
+                        <li class="red-bg"><a href="crafts.html">Crafts</a></li>
+                        <li class="green-bg"><a href="animations.html">Animations</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html #Contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="fade-up">
+        <div class="section">
+            <div class="texts">
+                <h1>?@#$%!</h1>
+                <p>Created this animation to practice my skills in animation, perspective, and sound.</p>
+            </div>
+            
+            <div class="item">
+                <img src="what_cover.png" 
+                data-title="?@#$%!"
+                alt="Program: Toon Boom Harmony"
+                data-video="what.mp4" 
+                data-orientation="landscape">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="item">
+                <img src="world_cover.png"
+                data-title="World of 7 Billion Contest"
+                alt="Program: Toon Boom Harmony"
+                data-video="World_of_7Billion.mp4" 
+                data-orientation="landscape">
+            </div>
+            
+            <div class="texts">
+                <h1>World of 7 Billion Contest</h1>
+                <p>Placing top 10 in the International World of 7 Billion Contest, I created this animation for my partner, Abigail.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="texts">
+                <h1>Bumbumz Emotes</h1>
+                <p>Cute emotes I designed for my friend's discord server. It is based off the plush brand BumBumz.</p>
+            </div>
+            
+            <div class="item">
+                <img src="emotes_cover.png" 
+                data-title="Bumbumz Emotes"
+                alt="Program: Procreate"
+                data-video="emotes.mp4" 
+                data-orientation="landscape">
+            </div>
+        </div>
+
+    </div>
+
+    <button id="scrollToTopBtn" title="Go to top !">▲</button>
+<script src="myscript.js"></script>
+</body>
+
+<footer>
+    <br><br>
+</footer>
+</html>

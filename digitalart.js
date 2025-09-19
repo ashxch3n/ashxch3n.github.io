@@ -1,7 +1,6 @@
 // scroll bar function
 function scrollContent(direction) {
   const container = document.getElementById('scroll');
-  const scrollAmount = 370; // match item width + margin
 
   container.scrollBy({
     left: direction * scrollAmount,
@@ -77,7 +76,7 @@ document.querySelectorAll('.item img').forEach(img => {
     }
     
     if (img.dataset.video) {
-        modalImg.style.display = 'none';   // hide image
+        modalImg.style.display = 'none';
         let modalVideo = document.getElementById('modalVideo');
         
         if (!modalVideo) {
@@ -170,29 +169,38 @@ scrollToTopBtn.addEventListener("click", function() {
 const sections = document.querySelectorAll(".section");
 
 function updateOpacity() {
-  const centerY = window.innerHeight / 2;
   let closest = null;
   let closestDistance = Infinity;
 
   sections.forEach(section => {
     const rect = section.getBoundingClientRect();
-    const sectionCenter = rect.top + rect.height / 2;
-    const distance = Math.abs(centerY - sectionCenter);
+    const distance = Math.abs(rect.top);
 
     if (distance < closestDistance) {
       closestDistance = distance;
       closest = section;
     }
   });
-    
+
   sections.forEach(section => {
-    section.classList.remove("active");
+    section.style.opacity = "0.3";
   });
+
   if (closest) {
-    closest.classList.add("active");
+    closest.style.opacity = "1";
+  }
+
+  // last section
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const pageHeight = document.documentElement.scrollHeight;
+
+  if (scrollPosition >= pageHeight - 5) { 
+    sections.forEach(section => {
+      section.style.opacity = "0.3";
+    });
+    sections[sections.length - 1].style.opacity = "1";
   }
 }
 
 window.addEventListener("scroll", updateOpacity);
-window.addEventListener("resize", updateOpacity);
-updateOpacity();
+window.addEventListener("load", updateOpacity);

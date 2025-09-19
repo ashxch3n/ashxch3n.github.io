@@ -160,6 +160,18 @@ function updateOpacity() {
     opacity = Math.max(0.2, Math.min(1, opacity));
 
     section.style.opacity = opacity;
+
+    // Special case: if scrolled to bottom, force last section visible
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    if (scrollPosition >= pageHeight - 5) { 
+      // little buffer (-5) to catch floating point rounding
+      sections.forEach(section => {
+        section.style.opacity = "0.3";
+      });
+      sections[sections.length - 1].style.opacity = "1";
+    }
   });
 }
 

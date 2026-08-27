@@ -358,3 +358,132 @@ hr {
     background-color: rgb(255, 0, 187);
     color: white;
 }
+/* mobile */
+body {
+    overflow-x: hidden;
+}
+
+.dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    display: block;
+    padding-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .nav {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .nav h1 {
+        margin-left: 0;
+        padding: 15px 0 5px 0;
+        font-size: 22px;
+        text-align: center;
+    }
+    .nav ul {
+        margin-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px 0 15px 0;
+    }
+    .nav li {
+        padding: 0 8px;
+    }
+    .nav a {
+        width: auto;
+    }
+    .dropdown-menu {
+        left: 50%;
+        transform: translate(-50%, -10px);
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+        transform: translate(-50%, 0);
+    }
+
+    .row,
+    .row2,
+    .row3 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item,
+    .dimensions1,
+    .dimensions2 {
+        height: auto;
+        width: 100%;
+        max-width: 400px;
+    }
+    .item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .modal {
+        padding: 20px;
+    }
+    .modal-content {
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    .everything {
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal-text {
+        max-width: 100%;
+        text-align: center;
+    }
+    .image-wrapper {
+        flex-direction: column;
+    }
+    .modal-content img {
+        max-width: 90vw;
+    }
+    .image-gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+    .image-gallery img {
+        height: 80px;
+        width: auto;
+        margin: 5px;
+    }
+    .stack2 {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .stack2 video {
+        max-width: 90vw;
+        max-height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav h1 {
+        font-size: 18px;
+    }
+    #scrollToTopBtn {
+        bottom: 20px;
+        right: 20px;
+        padding: 15px 18px;
+        font-size: 15px;
+    }
+}

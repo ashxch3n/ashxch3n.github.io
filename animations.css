@@ -288,3 +288,111 @@ ul.dropdown-menu {
     color: white;
 }
 
+/* mobile */
+body {
+    overflow-x: hidden;
+}
+.dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    display: block;
+    padding-top: 20px;
+}
+@media (max-width: 900px) {
+    .nav {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .nav h1 {
+        margin-left: 0;
+        padding: 15px 0 5px 0;
+        font-size: 22px;
+        text-align: center;
+    }
+    .nav ul {
+        margin-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px 0 15px 0;
+    }
+    .nav li {
+        padding: 0 8px;
+    }
+    .nav a {
+        width: auto;
+    }
+    .dropdown-menu {
+        left: 50%;
+        transform: translate(-50%, -10px);
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+        transform: translate(-50%, 0);
+    }
+
+    .section {
+        flex-direction: column;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .item {
+        height: 260px;
+        margin: 0 0 20px 0;
+        max-width: 90vw;
+    }
+    .texts {
+        width: 75%;
+        max-width: 300px;
+        margin: 0 auto 20px auto;
+        padding: 20px;
+    }
+    .texts h1 {
+        font-size: 18px;
+    }
+    .texts p {
+        font-size: 13px;
+    }
+
+    .modal {
+        padding: 20px;
+    }
+    .modal-content {
+        max-width: 95%;
+        gap: 20px;
+    }
+    .modal-content img {
+        max-width: 90vw;
+    }
+    .modal-content .landscape {
+        max-width: 90vw;
+    }
+    .modal-content video {
+        max-width: 90vw !important;
+        width: auto;
+        height: auto;
+        max-height: 90vh;
+    }
+    .modal-text {
+        max-width: 90vw;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav h1 {
+        font-size: 18px;
+    }
+    .item {
+        height: 200px;
+    }
+    #scrollToTopBtn {
+        bottom: 20px;
+        right: 20px;
+        padding: 15px 18px;
+        font-size: 15px;
+    }
+}
